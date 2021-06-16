@@ -1,4 +1,0 @@
-WHAT WE NEED TO DO:
-
-player Object:
-player-number, r, currentRoll, currentTurnScore, totalScore, 

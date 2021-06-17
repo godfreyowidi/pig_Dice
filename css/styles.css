@@ -1,12 +1,18 @@
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: linear-gradient(to right, rgb(66, 217, 255), rgb(113, 113, 253), rgb(0, 89, 255))
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: linear-gradient(to right, rgb(66, 217, 255), rgb(113, 113, 253), rgb(0, 89, 255));
+  height: 100vh;
 }
 
 .jumbotron {
-  margin: 10%;
+  background-image: url(/assets/smiley.jpg);
+  background-repeat: repeat;
+  font-weight: bolder;
+  color: darkblue;
+  width: 50%;
+  margin: auto;
   text-align: center;
-  opacity: .7;
+  opacity: .5;
 }
 
 #gameResults {
@@ -14,12 +20,24 @@ body {
 }
 
 .game-board {
-  display: grid;
-  grid-template-columns: 35% 30% 35%;
-  margin-top: 125px;
+ 
 }
+
+.players{
+  margin: auto;
+  padding: 25px;
+}
+
+.dice-roll {
+
+}
+
+.scoreBoard {
+}
+
 #footer {
+  width: 40%;
   background: linear-gradient(to right, red, rgb(247, 0, 255), rgb(134, 5, 255));
-  font-size: .5px;
+  font-size: 1rem;
   font-style: italic;
 }

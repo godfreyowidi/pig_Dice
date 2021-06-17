@@ -7,12 +7,7 @@ function Player(playerNumber, currentRoll, currentTurnScore, turnScore, totalSco
   this.status = status;
 }
 
-// let player1 = new Player(1, 0, 0, [], 0, false);
-
-// let player2 = new Player(2, 0, 0, [], 0, false);
-
 let rollValuesArray = [];
-
 Player.prototype.rollDice = function() {
   let rollValue = Math.floor(Math.random() * 6) + 1;
   rollValuesArray.push(rollValue);
@@ -21,7 +16,6 @@ Player.prototype.rollDice = function() {
     this.endTurn();
   }
 };
-
 Player.prototype.endTurn = function() {
   let sum = 0;
   if (rollValuesArray.includes(1)) {
@@ -33,7 +27,6 @@ Player.prototype.endTurn = function() {
   rollValuesArray = [];
   this.currentTurnScore = 0;
 };
-
 Player.prototype.calcTurnScore = function() {
   let sum = 0;
   rollValuesArray.forEach(function(element) {
@@ -41,7 +34,6 @@ Player.prototype.calcTurnScore = function() {
   });
   this.currentTurnScore = sum;
 };
-
 Player.prototype.calcTotalScore = function() {
 let sum = 0;
 this.turnScore.forEach(function(element) {
@@ -49,16 +41,13 @@ this.turnScore.forEach(function(element) {
 });
 this.totalScore = sum;
 };
-
 Player.prototype.gameOver = function() {
-  if (this.totalScore >= 20) {
+  if (this.totalScore >= 2) {
+    $(".game-board").hide();
     $("#gameResults").show();
-    $(".gameBoard").hide();
     $("#winner").text(this.playerNumber);
   };
 };
-
-//UI LOGIC
 
 $(document).ready(function() {
 let player1 = new Player(1, 0, 0, [], 0, false);
@@ -107,5 +96,7 @@ let player2 = new Player(2, 0, 0, [], 0, false);
     player2.gameOver();
   });
 
-
+  $("#newGame").click(function() {
+    location.reload();
+  })
 });

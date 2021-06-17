@@ -22,13 +22,13 @@
   <div class="container">
     <div class="game-board">
       <div class="players">
-        <div class="player-1">
+        <div class="players player-1">
           <h3>Player 1, Your Turn!</h3>
           <p>Player1 Current Turn Score:<br><span class="p1-currentTurnScore"></span></p>
           <button type="button" id="p1-roll" class="btn-primary">ROLL</button>
           <button type="button" id="p1-pass" class="btn-primary">PASS</button>
         </div>
-        <div class="player-2">
+        <div class="players player-2">
           <h3>Player 2, Your Turn!</h3>
           <p>Player2 Current Turn Score:<br><span class="p2-currentTurnScore"></span></p>
           <button type="button" id="p2-roll" class="btn-primary">ROLL</button>
@@ -38,16 +38,17 @@
           <h1>Current Dice Roll:<span id="dice-roll"></span></h1>
         </div>
         <div class="scoreBoard">
-          <h2>OFFICIAL SCOREBOARD:</h2>
-          <p class="total-score"></p>Player1 total score: <span id="p1-total"></span></p>
-          <p class="total-score"></p>Player2 total score: <span id="p2-total"></span></p>
+          <h4>OFFICIAL SCOREBOARD:</h4>
+          <p class="total-score"></p>Player1 <span id="p1-total"></span></p>
+          <p class="total-score"></p>Player2 <span id="p2-total"></span></p>
         </div>
       </div>
-      <div id="gameResults">
-        <h2>Congratulations player<span id="winner"></span>, YOU WON THE GAME!</h2>
-        <img src="https://quoteswell.com/wp-content/uploads/2017/10/f57a4e210313ab0004e8d07dd8a248ac-funny-things-funny-stuff-min.jpg">
-      </div>
     </div>  
+    <div id="gameResults">
+      <button class="btn-warning" id="newGame" type="button">New Game</button>
+      <h2>Congratulations player<span id="winner"></span>, YOU WON THE GAME!</h2>
+      <img src="https://quoteswell.com/wp-content/uploads/2017/10/f57a4e210313ab0004e8d07dd8a248ac-funny-things-funny-stuff-min.jpg">
+    </div>
     <div id="footer">
       <h2>Thanks for playing!<br>2021 Godfrey & Max</h2>        
     </div>
